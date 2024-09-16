@@ -1,7 +1,10 @@
 package org.example;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.List;
 
+@UtilityClass
 public class UniversityService {
     public static double averageCourseGrade(Course course) {
         return course.getStudents().stream().mapToDouble(Student::getGrade).average().orElse(0);
